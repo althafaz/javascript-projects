@@ -32,7 +32,7 @@ if(fuelLevel < 1000  || engineTemperature > 3500 || engineIndicatorLight === "re
 } else if (fuelLevel <= 5000 || engineTemperature > 2500){
     console.log("Check fuel level. Engines running hot.")
 } else {
-    console.log("Fuel and engine stauts pending...")
+    console.log("Fuel and engine status pending...")
 }
 
 
