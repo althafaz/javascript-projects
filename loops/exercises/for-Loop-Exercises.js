@@ -4,6 +4,29 @@
     c. Print the EVEN numbers 12 to -14 in descending order, one number per line.
     d. Challenge - Print the numbers 50 - 20 in descending order, but only if the numbers are multiples of 3. (Your code should work even if you replace 50 or 20 with other numbers). */
 
+for(let i =1; i <= 20;i++){
+  console.log(i)
+}
+
+console.log("\nOdd Number")
+
+for(let i =1; i <= 20;i += 2){
+   console.log(i)
+}
+
+console.log("\nEven number between two numbers")
+
+for(let i =12 ; i <= 12 && i >=-14 ;i -= 2){
+  console.log(i)
+}
+
+console.log("\nNumbers dviide by 3 between two numbers")
+
+for(let i =50 ; i <= 50 && i >=-20 ;i--){
+
+  if(i % 3 == 0)
+  console.log(i)
+}
 
 
 
