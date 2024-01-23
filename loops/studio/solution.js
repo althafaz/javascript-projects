@@ -15,15 +15,15 @@ function mealAssembly(protein, grains, veggies, beverages, desserts, numMeals) {
   
   for(let i=0; i < numMeals;i++) {
         let mealPrep = []
-        console.log("i"+i)
+        //console.log("i"+i)
 
         for(let x = 0; x < pantry.length; x++){
-          console.log("i,x"+i,x)
+          //console.log("i,x"+i,x)
             mealPrep.push(pantry[x][i])
         }
-        
+
         meals.push(mealPrep)
-        console.log(mealPrep)
+        //console.log(mealPrep)
   }
   /// Part A #2: Write a ``for`` loop inside this function
   /// Code your solution for part A #2 below this comment (and above the return statement) ... ///
@@ -36,6 +36,9 @@ function askForNumber() {
   numMeals = input.question("How many meals would you like to make?");
   
   /// CODE YOUR SOLUTION TO PART B here ///
+  while(numMeals < 1 || numMeals > protein.length){
+    numMeals = input.question("How many meals would you like to make?");
+  }
 
   return numMeals;
 }
