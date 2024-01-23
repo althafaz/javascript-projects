@@ -2,24 +2,35 @@ const input = require('readline-sync');
 
 // Part A: #1 Populate these arrays
 
-let protein = [];
-let grains = [];
-let veggies = [];
-let beverages = [];
-let desserts = [];
+let protein = ['chicken', 'pork', 'tofu', 'beef', 'fish', 'beans'];
+let grains = ['rice', 'pasta', 'corn', 'potato', 'quinoa', 'crackers'];
+let veggies = ['peas', 'green beans', 'kale', 'edamame', 'broccoli', 'asparagus'];
+let beverages = ['juice', 'milk', 'water', 'soy milk', 'soda', 'tea'];
+let desserts = ['apple', 'banana', 'more kale', 'ice cream', 'chocolate', 'kiwi'];
 
 
 function mealAssembly(protein, grains, veggies, beverages, desserts, numMeals) {
   let pantry = [protein, grains, veggies, beverages, desserts];
   let meals = [];
   
+  for(let i=0; i < numMeals;i++) {
+        let mealPrep = []
+        console.log("i"+i)
+
+        for(let x = 0; x < pantry.length; x++){
+          console.log("i,x"+i,x)
+            mealPrep.push(pantry[x][i])
+        }
+        
+        meals.push(mealPrep)
+        console.log(mealPrep)
+  }
   /// Part A #2: Write a ``for`` loop inside this function
   /// Code your solution for part A #2 below this comment (and above the return statement) ... ///
-
-
   return meals;
 }
 
+let meals = mealAssembly(protein, grains, veggies, beverages, desserts, askForNumber());
 
 function askForNumber() {
   numMeals = input.question("How many meals would you like to make?");
