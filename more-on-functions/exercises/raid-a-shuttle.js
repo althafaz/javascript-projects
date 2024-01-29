@@ -21,8 +21,43 @@ function holdStatus(arr){
 let fuelLevel = 200000;
 let cargoHold = ['meal kits', 'space suits', 'first-aid kit', 'satellite', 'gold', 'water', 'AE-35 unit'];
 
+let randomFuelLevelCheck = function(levelOfFuel){
+
+    if (checkFuel(a) === 'green') {
+      return levelOfFuel - 100001;
+    }
+    else if (checkFuel(a) === 'yellow') {
+      return levelOfFuel - 50001;
+    }
+    else {
+      return levelOfFuel;
+    } 
+};
+
+let excessiveTrashWeightCheck = function(itemsInCargo){
+
+    let weight = itemsInCargo.splice(3,2,'camera','telescopes')
+    return weight
+
+};
+
+
+let irs = function(levelOfFuel, itemsInCargo){
+   levelOfFuel = randomFuelLevelCheck(fuelLevel)
+   itemsInCargo = excessiveTrashWeightCheck(cargoHold)
+
+   console.log(`Raided ${levelOfFuel} kg of fuel from the tanks, and stole ${itemsInCargo[0]} and ${itemsInCargo}from the cargo hold.`)
+}
+
+console.log(excessiveTrashWeightCheck())
+console.log(cargoHold)
+
+
+
+
 console.log("Fuel level: " + checkFuel(fuelLevel));
 console.log("Hold status: " + holdStatus(cargoHold));
+
 
 /* Steal some fuel from the shuttle:
  * /
@@ -54,4 +89,4 @@ console.log("Hold status: " + holdStatus(cargoHold));
 //b). Call your anonymous fuel and cargo functions from within irs.
 
 //c). Use a template literal to return, "Raided _____ kg of fuel from the tanks, and stole ____ and ____ from the cargo hold."
-
+*/
