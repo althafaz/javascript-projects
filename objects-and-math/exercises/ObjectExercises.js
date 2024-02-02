@@ -48,7 +48,7 @@ let crew = [superChimpOne, superChimpTwo, salamander, dog, waterBear];
 
 	
 function fitnessTest(candidates){
-   let results = [], numSteps, turns;
+   let results = [], numSteps=0, turns=0;
    for (let i = 0; i < candidates.length; i++){
        numSteps = 0;
        turns = 0;
