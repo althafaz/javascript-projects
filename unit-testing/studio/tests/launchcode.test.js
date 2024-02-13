@@ -30,7 +30,7 @@ describe("Testing launchcode", function(){
     expect(launchcode.method(25)).toEqual('Rocks!')
     expect(launchcode.method(12)).toEqual('LaunchCode!')
     expect(launchcode.method(15)).toEqual('Code Rocks!')
-    expect(launchcode.method(10)).toEqual('Launch Rocks!')
+    expect(launchcode.method(10)).toEqual('Launch Rocks! (CRASH!!!!)')
     expect(launchcode.method(30)).toEqual('LaunchCode Rocks!')
     expect(launchcode.method(7)).toEqual(`Rutabagas! That doesn't work.`)
   })
