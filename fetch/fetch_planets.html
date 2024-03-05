@@ -1,0 +1,32 @@
+<html>
+   <head>
+      <title>Fetch Planets</title>
+      <script>
+
+         window.addEventListener("load", function(){
+            // TODO: fetch planets JSON
+            const destination = document.getElementById("destination");
+            fetch("https://handlers.education.launchcode.org/static/planets.json").then(res=>{
+                let index = 0;
+                res.json().then(data=>{
+
+                    destination.addEventListener('click',()=>{
+                        destination.innerHTML = `<div>
+                                                    <h3>Planet ${data[index].name}</h3>
+                                                    <img src=${data[index].image} height=250></img>
+                                                </div>`;
+                        index = (index + 1) % data.length;
+                        console.log((index + 1)% data.length, index,data.length)
+                    })
+                })
+            })
+         });
+      </script>
+   </head>
+   <body>
+      <h1>Destination</h1>
+      <div id="destination">
+         <h3>Planet</h3>
+      </div>
+   </body>
+</html>
