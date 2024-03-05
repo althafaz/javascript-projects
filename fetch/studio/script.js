@@ -24,7 +24,8 @@ window.addEventListener("load", function(){
                                         <h3>${el.firstName +' '+ el.lastName} </h3>
                                             <ul>
                                                 <li>Hours in space: ${el.hoursInSpace}</li>
-                                                <li>Active: ${el.active ? 'is active' : 'is not active'}</li>
+                                                ${el.active ? '<li class="active">is active</li>' :
+                                                '<li>is not active</li>'}
                                                 <li>Skills: ${el.skills}</li>
                                             </ul>
                                     </div>
